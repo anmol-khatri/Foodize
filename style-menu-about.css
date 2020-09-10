@@ -3,18 +3,66 @@
 	padding: 0;
 	outline: none;
 	font-family: 'helvetica', sans-serif;
-}/*This is the part for contact form styling*/
+
+	
+}
+/*This is the part for contact form styling*/
+
+.signup-body{
+	position: relative;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+  max-width: 350px;
+  width: 100%;
+ 
+  border-radius: 5px;
+  
+  
+}
+.signup-body table
+        {
+			padding: 0;
+		color:black;
+		background-color: white;
+		border-radius:20px;
+		box-shadow: 4px 4px 5px rgba(254,236,164,1);
+        }
+        
+.signup-body #button
+        {
+			border: 0px;
+			margin-top: 0 auto;
+			padding: 10px;
+			text-align: center;
+			width: 100%;
+			background: #e25822;
+			color: #332902;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			font-weight: bold;
+			border-radius: 25px;
+			cursor: pointer;
+		}
+		.signup-body h2{
+			text-align: center;
+  
+  
+  letter-spacing: 3px;
+  color: #332902;
+		}
 .wrapper{
   position: relative;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
   max-width: 350px;
   width: 100%;
   background: #fff;
   padding: 25px;
-  border-radius: 5px;
-  box-shadow: 4px 4px 2px rgba(254,236,164,1); 
+  border-radius: 25px;
+  box-shadow: 4px 4px 5px rgba(254,236,164,1); 
 }
 
 .wrapper h2{
@@ -143,13 +191,18 @@
 	float: right;
 	position: relative;
 	left: 20px;
-	
+		
 		padding: 10px 20px;
 		border:0;
 		background: #e25822;
 		font-weight: bold;
-		cursor: pointer;
+		
 	
+}
+.nav-links .btn a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #332902;
 }
 /*left bar with social icons*/
 .vertical-bar{
@@ -222,7 +275,7 @@ position: fixed;
 }
 .contact-footer{
 	
-	top: 210px;
+	top: 350px;
 	
 }
 

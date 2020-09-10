@@ -55,7 +55,9 @@
 	position: relative;
 	left: 50px;
 	border-right: 2px solid white;
+	border-right: 2px solid #e25822;
 	float: left;
+	color: #e25822;
 	
 }
 .contact{
@@ -98,11 +100,21 @@
 	position: relative;
 	left: 20px
 }
-
+.nav-links .btn a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #332902;
+}
 .banner-title{
 	margin: 80px 130px;
 	color: #fff;
 
+}
+.banner-title .btn a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #332902;
+	
 }
 .menucontent img{
 	width: 400px;
@@ -212,12 +224,16 @@ position: absolute;
 	.nav-links ul a{
 		display: block;
 	}
-	.nav-links .btn{
+	.nav-links .btn {
 		float: none;
 		position: relative;
-		left: 25px;
+		
 		margin-left: 25px;
 		margin-top:10px; 
+	}
+	.banner-title .btn{
+		position: relative;
+		left: 60px;
 	}
 	.address,.openinghrs,.contact{
 		float: none;
@@ -247,15 +263,17 @@ position: absolute;
 		position: relative;
 		left: 10px;
 	}
+	.banner-title .btn {
+		left: 40px;
+	}
 }
 .bright-mode .social-icons .fa{
 	color: white;
-	border: 1px solid white;
 }
 .bright-mode .container{
 	background: black;
 }
-.bright-mode .address,.bright-mode .contact,.bright-mode .openinghrs{
+.bright-mode .address,.bright-mode .contact{
 	color: black;
 	border-top: 2px solid black;
 }
@@ -269,7 +287,7 @@ position: absolute;
 .bright-mode .banner-title,.bright-mode .nav-links ul a,.bright-mode .nav-bar .fa{
 	color: #000;
 }
-.bright-mode .navbar,.bright-mode .btn{
+.bright-mode .navbar,.bright-mode .btn a,.bright-mode .btn{
 	color: white;
 }
 
