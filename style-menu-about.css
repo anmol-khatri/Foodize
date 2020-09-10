@@ -6,7 +6,7 @@
 }/*This is the part for contact form styling*/
 .wrapper{
   position: relative;
-  top: 45%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
   max-width: 350px;
@@ -222,7 +222,7 @@ position: fixed;
 }
 .contact-footer{
 	
-	top: 300px;
+	top: 210px;
 	
 }
 
