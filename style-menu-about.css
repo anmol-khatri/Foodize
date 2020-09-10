@@ -1,10 +1,72 @@
 *{
 	margin:0;
 	padding: 0;
-	font-family: helvetica;
+	outline: none;
+	font-family: 'helvetica', sans-serif;
+}/*This is the part for contact form styling*/
+.wrapper{
+  position: relative;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgba(254,236,164,1); 
 }
 
-.hero{
+.wrapper h2{
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #332902;
+}
+
+.wrapper .input_field{
+  margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapper textarea{
+  resize: none;
+  height: 80px;
+}
+
+.wrapper .btn input[type="submit"]{
+  border: 0px;
+  margin-top: 0 auto;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background: #e25822;
+  color: #332902;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#error_message{
+  margin-bottom: 20px;
+  background: #ff9cea;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+/*THis is the end for contact form*/
+/*this is body of menu page*/
+.menu-body{
 	width: 1120px;
 	height: 100vh;
 	margin: 0 auto;
@@ -20,6 +82,7 @@
 	position: relative;
 	overflow-x: hidden;
 }
+/*this is the body of about page*/
 .about-body{
 	width: 1120px;
 	height: 100vh;
@@ -33,11 +96,15 @@
 	background-repeat: no-repeat;
   background-attachment: fixed;
 	position: relative;
+	
 	overflow-x: hidden;
 }
+/*this is the start of navigation bar of all 3 pages*/
 .nav-bar{
 	display: flex;
 	padding: 40px 120px;
+	position: fixed;
+	z-index: 15;
 }
 
 .nav-logo img{
@@ -71,19 +138,20 @@
 .nav-links ul li:hover::after{
 	width: 100%;
 }
-.btn{
-	padding: 10px 20px;
-	border:0;
-	background: #e25822;
-	font-weight: bold;
-	cursor: pointer;
-}
+/*button of nav bar*/
 .nav-links .btn{
 	float: right;
 	position: relative;
-	left: 20px
+	left: 20px;
+	
+		padding: 10px 20px;
+		border:0;
+		background: #e25822;
+		font-weight: bold;
+		cursor: pointer;
+	
 }
-
+/*left bar with social icons*/
 .vertical-bar{
 height: 100vh;
 background: #000;
@@ -108,51 +176,64 @@ position: fixed;
 	bottom: 0;
 	position: absolute;
 }
-.social-icons .fa {
+.social-icons a {
 	margin: 15px 23px;
+	text-decoration: none;
+	color: black;
 	display: block;
 	padding: 8px;
 	border: 1px solid #000;
 	border-radius: 50%;
 	cursor: pointer;
+	font-size: large;
 }
 .nav-bar .fa{
 	font-size: 22px;
 }
+/*this marks the end of navigation bar styling*/
+
+/*this is for menu contents*/
 .soupbox,.saladbox,.maincoursebox,.winesbox,.dessertbox{
 	color: white;
 	position: relative;
-	
+	top: 200px;
 	padding: 30px;
 	text-align: center;
-	/*cursor: pointer;*/
 }
 .soupbox,.maincoursebox{
 	float: left;
 	position: relative;
 	left: 100px;
+	
 
 }
-h1{
+.specials h1{
+	position: relative;
 	color: white;
+	top: 170px;
 	text-align: center;
 }
-.footer{
+/*footer of menu and contact*/
+.menu-footer, .contact-footer,.about-footer{
 	font-size: 22px;
 	position: relative;
 	left: 150px;	
 	color: white;
 }
+.contact-footer{
+	
+	top: 300px;
+	
+}
+
 .about-footer{
-	font-size: 22px;
-	position: relative;
-	left: 150px;
-	margin-top: 150px;
-	color: white;
+	top: 410px;
+}
+.menu-footer{
+	top: 240px;
 }
 .address{
 	width: 20%;
-
 	border-right: 2px solid white;
 	float: left;
 }
@@ -160,9 +241,9 @@ h1{
 	width: 25%;
 	position: relative;
 	left: 50px;
-	border-right: 2px solid white;
+	border-right: 2px solid #e25822;
 	float: left;
-	
+	color: #e25822;
 }
 .contact{
 	width: 30%;
@@ -172,12 +253,16 @@ h1{
 }
 .about-content{
 	width: 70%;
+	top: 250px;
 	position: relative;
 	margin: 0 auto;
 	padding: 10px;
 	color: white;
 	font-size: 22px;
 	letter-spacing: 2px;
+}
+.about-content span{
+	color: #e25822;
 }
 @media(max-width: 950px){
 	.soupbox{
@@ -188,7 +273,7 @@ h1{
 		float: none;
 		left: 0;
 	}
-	.hero{
+	.menu-body{
 		width: 100%;
 		margin:0 auto;
 	}
@@ -197,16 +282,18 @@ h1{
 	margin:0 ;
 	height: 100vh;
 	}
-
+	
 	.vertical-bar{
 		position: fixed;
 	}
 	.about-content{
 		margin-left: 100px;
+		top: 20px;
 		padding: 0px;
 	}
 	.nav-bar{
 		padding: 20px 100px;
+		position: relative;
 	}
 	.fa-bars{
 		position: absolute;
@@ -255,7 +342,12 @@ h1{
 		border-right: none;
 		border-top:2px solid white;
 	}
-	
+	.openinghrs{
+		border-color: #e25822;
+	}
+	.about-footer{
+		top:80px;
+	}
 	
 }
 @media(max-width: 640px){
@@ -279,8 +371,9 @@ h1{
 	}
 }
 
-
-
+ span{
+	color: #e25822;
+}
 
 
 

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact form</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+	<title>Contact form</title>
+	<link rel = "icon" href =  
+"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRuh-Z7ltoUX-0BwpToQS8Pj_1bqmj6zY34RQ&usqp=CAU" 
+        type = "image/x-icon"> 
+	<link rel="stylesheet" type="text/css" href="style-menu-about.css">
+	<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+<body>
+	<div class="about-body">
+			<div class="vertical-bar">
+			<br><div class="search-icon">
+				
+			</div>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a> 
+				<a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a> 
+				<a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a> 
+				<a href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a> 
+			</div>
+		</div>
+			<div class="nav-bar">
+				<div class="nav-logo"> 
+					<img src="logo.jpg" width="135px">
+				</div>
+				<div class="nav-links" id="nav-links">
+
+					<i class="fa fa-close" onclick="closeMenu()"></i>
+					<ul>
+						<li><a href="index.html"><i class="fa fa-home" ></i> HOME</a></li>
+						<li><a href="menu.html"><i class="fa fa-copy" ></i> MENU</a></li>
+
+						<li><a href="about.html"><i class="fa fa-question-circle-o" ></i> ABOUT</a></li>
+						<li><a href="#"><i class="fa fa-phone-square" ></i> CONTACT</a></li>	
+					</ul>
+					<button type="button" class="btn"><a href="#"> CONTACT</a></button>
+				</div>
+				<i class="fa fa-bars" onclick="showMenu()"></i>	
+						
+		</div>
+        <div class="wrapper">
+            <h2>Cont<span>act</span> us</h2>
+            <div id="error_message">
+               
+            </div>
+            <form action="" id="myform" onsubmit = "return validate();">
+              <div class="input_field">
+                  <input type="text" placeholder="Name" id="name">
+              </div>
+              <div class="input_field">
+                  <input type="text" placeholder="Subject" id="subject">
+              </div>
+              <div class="input_field">
+                  <input type="text" placeholder="Phone" id="phone">
+              </div>
+              <div class="input_field">
+                  <input type="text" placeholder="Email" id="email">
+              </div>
+              <div class="input_field">
+                  <textarea placeholder="Message" id="message"></textarea>
+              </div>
+              <div class="btn">
+                  <input type="submit">
+              </div>
+            </form>
+          </div>
+
+		
+			
+			<div class="contact-footer">
+			<div class="address">
+				<h2>Address</h2><br>Foodize Restaurant<br>Thapathali, Kathmandu<br>
+			</div>
+			<div class="openinghrs">
+				<h2>Opening hours</h2><br>Mon-Fri: 5pm-1am<br>
+				Sat-Sun: 6pm-3am<br>
+			</div>
+			<div class="contact">
+				<h2>Contact</h2><br>
+				gmail: restaurantfoodize<br>
+				phone: 9862770461;
+			</div>
+		</div>
+		</div>
+	</div>
+	<script >
+        /*function to show menu in responsive*/
+	var show = document.getElementById("nav-links");
+	function showMenu(){
+		show.style.right = "0";
+	}
+    /*function to close menu in responsive*/
+	function closeMenu(){
+		show.style.right = "-200px";
+	}
+    /*function to validate the contact form*/
+    function validate(){
+  var name = document.getElementById("name").value;
+  var subject = document.getElementById("subject").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  var error_message = document.getElementById("error_message");
+  
+  error_message.style.padding = "10px";
+  
+  var text;
+  if(name.length < 5){
+    text = "Please Enter valid Name";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(subject.length < 10){
+    text = "Please Enter Correct Subject";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(isNaN(phone) || phone.length != 10){
+    text = "Please Enter valid Phone Number";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(email.indexOf("@") == -1 || email.length < 6){
+    text = "Please Enter valid Email";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if(message.length <= 15){
+    text = "Please Enter More Than 15 Characters";
+    error_message.innerHTML = text;
+    return false;
+  }
+  /*alerts that form successfully submitted*/
+  alert("Form Submitted Successfully!");
+  return true;
+}
+	
+</script>
+</body>
+</html>

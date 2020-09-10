@@ -140,16 +140,19 @@ position: absolute;
 	bottom: 0;
 	position: absolute;
 }
-.social-icons .fa {
+.social-icons a {
 	margin: 15px 23px;
 	display: block;
 	padding: 8px;
 	border: 1px solid #000;
 	border-radius: 50%;
 	cursor: pointer;
+	text-decoration: none;
+	color: black;
 }
 .nav-bar .fa{
 	font-size: 22px;
+	
 }
 
 
