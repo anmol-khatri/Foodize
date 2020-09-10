@@ -133,8 +133,8 @@ height: 100%;
 background: #000;
 border-right: 2px solid #e25822;
 top: 0;
-left: 0;
-position: absolute;
+
+position: fixed;
 }
 
 
