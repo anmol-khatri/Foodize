@@ -1,0 +1,293 @@
+*{
+	margin:0;
+	padding: 0;
+	font-family: helvetica;
+}
+
+.hero{
+	width: 1120px;
+	height: 100vh;
+	margin: 0 auto;
+	font-size: 22px;
+	background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8))
+	, url(backchef.jpg);
+	
+	background-position: center;
+	background-size: cover;
+	
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+	position: relative;
+	overflow-x: hidden;
+}
+.about-body{
+	width: 1120px;
+	height: 100vh;
+	margin: 0 auto;
+	background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8))
+	, url(aboutbackground.jpg);
+	
+	background-position: center;
+	background-size: cover;
+	
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+	position: relative;
+	overflow-x: hidden;
+}
+.nav-bar{
+	display: flex;
+	padding: 40px 120px;
+}
+
+.nav-logo img{
+	position: relative;
+	left: 20px;
+}
+.nav-links ul{
+	margin-left: 50px;
+	display: inline;
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 25px;
+}
+.nav-links ul a{
+	color: #e25822;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.nav-links ul li::after{
+	content: '';
+	width: 0;
+	height: 2px;
+	background: #e25822;
+	display: block;
+	margin: auto;
+	transition: .5s;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+.btn{
+	padding: 10px 20px;
+	border:0;
+	background: #e25822;
+	font-weight: bold;
+	cursor: pointer;
+}
+.nav-links .btn{
+	float: right;
+	position: relative;
+	left: 20px
+}
+
+.vertical-bar{
+height: 100vh;
+background: #000;
+border-right: 2px solid #e25822;
+
+position: fixed;
+}
+
+
+.search-icon{
+	height: 60vh;
+	width: 80px;
+	margin-right: -2px;
+}
+
+.social-icons{
+	height: 40vh;
+	width: 80px;
+	background: #e25822;
+	text-align: center;
+	padding-top: 27%;
+	bottom: 0;
+	position: absolute;
+}
+.social-icons .fa {
+	margin: 15px 23px;
+	display: block;
+	padding: 8px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.nav-bar .fa{
+	font-size: 22px;
+}
+.soupbox,.saladbox,.maincoursebox,.winesbox,.dessertbox{
+	color: white;
+	position: relative;
+	
+	padding: 30px;
+	text-align: center;
+	/*cursor: pointer;*/
+}
+.soupbox{
+	float: left;
+	position: relative;
+	left: 100px;
+
+}
+h1{
+	color: white;
+	text-align: center;
+}
+.maincoursebox{
+	float: left;
+	position: relative;
+	left: 100px;
+	margin: 20px;
+}
+.footer{
+	font-size: 22px;
+	position: relative;
+	left: 150px;	
+	color: white;
+}
+.about-footer{
+	font-size: 22px;
+	position: relative;
+	left: 150px;
+	margin-top: 150px;
+	color: white;
+}
+.address{
+	width: 20%;
+
+	border-right: 2px solid white;
+	float: left;
+}
+.openinghrs{
+	width: 25%;
+	position: relative;
+	left: 50px;
+	border-right: 2px solid white;
+	float: left;
+	
+}
+.contact{
+	width: 30%;
+	float: left;
+	position: relative;
+	left: 100px;
+}
+.about-content{
+	width: 70%;
+	position: relative;
+	margin: 0 auto;
+	padding: 10px;
+	color: white;
+	font-size: 22px;
+	letter-spacing: 2px;
+}
+@media(max-width: 950px){
+	.soupbox{
+		float: none;
+		left: 0;
+	}
+	.maincoursebox{
+		float: none;
+		left: 0;
+	}
+	.hero{
+		width: 100%;
+		margin:0 auto;
+	}
+	.about-body{
+	width: 100%;
+	margin:0 ;
+	height: 100vh;
+	}
+
+	.vertical-bar{
+		position: fixed;
+	}
+	.about-content{
+		margin-left: 100px;
+		padding: 0px;
+	}
+	.nav-bar{
+		padding: 20px 100px;
+	}
+	.fa-bars{
+		position: absolute;
+		right: 20px;
+		top: 10px;
+	}
+	.nav-bar .fa{
+		display: block;
+		color: #e25822;
+		margin: 10px 25px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.nav-links{
+		height: 100vh;
+		width: 200px;
+		background: #000;
+		border-left: 2px solid #e25822;
+		border-bottom:2px solid #e25822;
+		top: 0;
+		right: -200px;
+		position: absolute;
+		text-align: left;
+		z-index: 2;
+		transition: 0.5s;
+	}
+	.nav-links ul{
+		float: left;
+		margin: 4px;
+	}
+	.nav-links ul a{
+		display: block;
+	}
+	.nav-links .btn{
+		float: none;
+		position: relative;
+		left: 25px;
+		margin-left: 25px:
+		margin-top:10px; 
+	}
+	.address,.openinghrs,.contact{
+		float: none;
+		left: 0;
+		top: 0px;
+		padding: 25px;
+		border-right: none;
+		border-top:2px solid white;
+	}
+	
+	
+}
+@media(max-width: 640px){
+	.vertical-bar{
+		display: none;
+	}
+	.address,.openinghrs,.contact{
+		position: relative;
+		left: -120px;
+	}
+}
+@media(max-width: 300px){
+	.vertical-bar{
+		display: none;}
+	.nav-logo{
+		position: relative;
+		left: -100px;
+	}
+	.about-content{
+		left: -70px;
+	}
+}
+
+
+
+
+
+
+
