@@ -6,7 +6,7 @@
 }/*This is the part for contact form styling*/
 .wrapper{
   position: relative;
-  top: 70%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%,-50%);
   max-width: 350px;
